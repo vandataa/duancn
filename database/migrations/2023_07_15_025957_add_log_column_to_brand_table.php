@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('brands', function (Blueprint $table) {
-            //
+            $table->string('logo')->after('name');
+            // điều chỉnh đứng sau
         });
     }
 
@@ -22,7 +23,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('brands', function (Blueprint $table) {
-            //
+            $table->dropColumn('logo');
         });
     }
 };
