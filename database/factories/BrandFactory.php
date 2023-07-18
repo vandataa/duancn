@@ -16,6 +16,7 @@ class BrandFactory extends Factory
     {
         return [
             'name'=> $this->faker->name(),
+            'image'=> $this->faker->name(),
             'description'=> $this->faker->name()
         ];
     }
